@@ -23,3 +23,7 @@ jobs:
       - name: Go run
         run: go run ./main.go
 
+      - uses: actions/upload-artifact@main
+        with:
+          name: Go artifacts
+          path: public/

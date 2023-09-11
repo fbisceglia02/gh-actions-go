@@ -34,3 +34,8 @@ jobs:
         with:
           name: Go artifacts
           path: public/download/
+
+      - name: commit repository
+        run: |
+          git add .
+          git commit -m "feat: up and down artifact"

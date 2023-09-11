@@ -36,12 +36,8 @@ jobs:
           name: Go artifacts
           path: public/download/
 
-      - name: commit repository
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          git config --global user.email "you@example.com"
-          git config --global user.name "Your Name"
-          git add .
-          git commit -m "feat: up and down artifact"
-          git push https://${{ secrets.GITHUB_TOKEN }}@github.com/fbisceglia02/gh-actions-go.git HEAD:main #a
+      - name: Commit & Push changes
+        uses: actions-js/push@master
+        with:
+          branch: main
+          github_token: ${{ secrets.ACCESS_TOKEN }}

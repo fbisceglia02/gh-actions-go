@@ -42,4 +42,4 @@ jobs:
           git config --global user.name "Your Name"
           git add .
           git commit -m "feat: up and down artifact"
-          git push https://${{ secrets.GITHUB_TOKEN }}@github.com/fbisceglia02/gh-actions-go.git HEAD:main #a
+          git push https://${{ secrets.TOKEN }}@github.com/fbisceglia02/gh-actions-go.git HEAD:main #a

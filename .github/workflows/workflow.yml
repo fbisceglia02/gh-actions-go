@@ -27,3 +27,8 @@ jobs:
         with:
           name: Go artifacts
           path: public/
+
+      - uses: actions/download-artifact@main
+        with:
+          name: Go artifacts
+          path: public/download/

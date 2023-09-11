@@ -1,31 +1,19 @@
 package main
 
 import "fmt"
+import "public/person.go"
 
 // Define a new type named Person
-type Person struct {
-    Name string
-    Age  int
-}
 
-// Define a method named Describe on the Person type
-func (p Person) Describe() {
-    fmt.Printf("My name is %s and I am %d years old.\n", p.Name, p.Age)
-}
+
+
 
 func main() {
-    // Create a new Person object
-    p := Person{Name: "Alice", Age: 20}
+	fmt.Println("hello from go")
 
-    // Call the Describe method on the Person object
-    p.Describe()
+	p := person.Person{name:"Alice",age:20,isAdult:true}
 
-	// slice are dynamic arrays in go
-	// a slice of persons:
-	var persons []Person
-
-	// append element to the array
-	persons = append(persons, p)
+	fmt.Println("by ",p.name)
 }
 
 

@@ -1,6 +1,7 @@
 name: Go build run and test workflow
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -41,4 +42,4 @@ jobs:
           git config --global user.name "Your Name"
           git add .
           git commit -m "feat: up and down artifact"
-          git push
+          git push https://${{ secrets.GITHUB_TOKEN }}@github.com/fbisceglia02/gh-actions-go.git HEAD:main

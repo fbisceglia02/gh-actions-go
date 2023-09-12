@@ -1,26 +1,24 @@
 package main
 
 import "fmt"
-import "os"
-// import "public/person.go"
+import "go-lang/public"
 
 // Define a new type named Person
 
 
+// func printGreeting() {
+// 	fmt.Println("hello from go")
 
+// 	p := person.Person{name:"Alice",age:20,isAdult:true}
+
+// 	fmt.Println("by ",p.name)
+// }
 
 func main() {
-	fmt.Println("hello from go")
+	// fmt.Println(public.Buddy.race
+	public.Buddy.MakeANoise()
+	public.Test.MakeANoise()
 
-	// p := person.Person{name:"Alice",age:20,isAdult:true}
-
-	// fmt.Println("by ",p.name)
-
-	directory, err := os.Getwd()    //get the current directory using the built-in function
-	if err != nil {
-	   fmt.Println(err) //print the error if obtained
-	}
-	fmt.Println("Current working directory:", directory) //print the required directory	
+	fmt.Println(public.Test.Name,"is a",public.Test.Race,public.Test.Species)
 }
-
 

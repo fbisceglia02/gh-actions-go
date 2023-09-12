@@ -1,9 +1,13 @@
-package person
-
-import "fmt"
+package public
 
 type Person struct {
     Name string
     Age  int
-	isAdult bool
+	IsAdult bool
+}
+
+var John = Person{
+    Name: "John",
+    Age: 20,
+    IsAdult: true,
 }
